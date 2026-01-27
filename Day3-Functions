@@ -1,0 +1,1246 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "0f53b1db",
+   "metadata": {},
+   "source": [
+    "FUNCTIONS IN PYTHON"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "741dc768",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "'''why do we need function\n",
+    "lets take a senario you are working on complex projects and simple projects\n",
+    "when you are working with complex projects break down them in to smaller tasks\n",
+    "when it is smaller task of you need to multiple statement\n",
+    "eg: if you want to operation in that you need to write multiple statments, all that you keep it together & reusable it later\n",
+    "all the statements stay together thats why we create python\n",
+    "'''"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "794b92e1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "'''FUNCTIONS are two types >>inbuild function and >>user defined function\n",
+    ">>inbuild....print(),input(),type(),id(),min(),max(),int()etc\n",
+    ">>user defined ...these are defined by the user\n",
+    "\n",
+    ">>>>function is collection of statments\n",
+    "\n",
+    "Two main property of the function is\n",
+    "..>define the function using keyword def\n",
+    "..>calling the function\n",
+    "\n",
+    "\n",
+    ">>>>function always defined using keyword def\n",
+    ">>>>function always declares as ()\n",
+    "\n",
+    ".....>difference b/w variable and function.......| a - variable| b() - function \n",
+    "'''"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7e6ce1c1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "'''SYNTAX OF FUNCTION: \n",
+    " def hello() #define the function name\n",
+    "    print(\"hi\")#print some statment\n",
+    "helio() # call the function name'''"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e0443cad",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def hello(): #defineing function with keyword def\n",
+    "    print('hi')#print stmt\n",
+    "# there is no output printed\n",
+    "# to print output we need to call the function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "7a83a290",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hi\n"
+     ]
+    }
+   ],
+   "source": [
+    "def hello():\n",
+    "    print('hi')\n",
+    "hello()#calling function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "89365bfb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hi\n",
+      "hi\n",
+      "hi\n"
+     ]
+    }
+   ],
+   "source": [
+    "def hello():#....> if we want to print multiple times\n",
+    "    print('hi')\n",
+    "hello()#calling function\n",
+    "\n",
+    "def hello():\n",
+    "    print('hi')\n",
+    "hello()#calling function\n",
+    "\n",
+    "def hello():\n",
+    "    print('hi')\n",
+    "hello()#calling function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "30a73279",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#but as we do above it takes more memory\n",
+    "#so,instead printing everything every time..we call function multiple times"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "7fe4f87e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hi\n",
+      "hi\n",
+      "hi\n"
+     ]
+    }
+   ],
+   "source": [
+    "def hello():\n",
+    "    print('hi')\n",
+    "hello()#calling function\n",
+    "\n",
+    "hello()\n",
+    "\n",
+    "hello()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d0c7fe4d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hi\n"
+     ]
+    },
+    {
+     "ename": "TypeError",
+     "evalue": "add() missing 2 required positional arguments: 'a' and 'b'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[9], line 10\u001b[0m\n\u001b[0;32m      8\u001b[0m     c\u001b[38;5;241m=\u001b[39ma\u001b[38;5;241m+\u001b[39mb\n\u001b[0;32m      9\u001b[0m     \u001b[38;5;28mprint\u001b[39m(c)\n\u001b[1;32m---> 10\u001b[0m add()\n\u001b[0;32m     12\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;21mperson\u001b[39m(name,age):\n\u001b[0;32m     13\u001b[0m     \u001b[38;5;28mprint\u001b[39m(name)\n",
+      "\u001b[1;31mTypeError\u001b[0m: add() missing 2 required positional arguments: 'a' and 'b'"
+     ]
+    }
+   ],
+   "source": [
+    "#we can also write multiple functions\n",
+    "\n",
+    "def hello(): #function with no arguments\n",
+    "    print('hi')\n",
+    "hello()\n",
+    "\n",
+    "def add(a,b):# function with arguments\n",
+    "    c=a+b\n",
+    "    print(c)\n",
+    "add()\n",
+    "\n",
+    "def person(name,age):#function with arguments\n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "person()# we need to pass positional arguments"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "91c3ec33",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "hi\n",
+      "7\n",
+      "hari\n",
+      "20\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "def hello(): #function with no arguments\n",
+    "    print('hi')\n",
+    "hello()\n",
+    "\n",
+    "def add(a,b):# function with arguments\n",
+    "    c=a+b\n",
+    "    print(c)\n",
+    "add(3,4)# positional args\n",
+    "\n",
+    "def person(name,age):#function with arguments\n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "person('hari',20)# positional args"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "616d24c1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7\n",
+      "hi\n",
+      "7\n",
+      "hari\n",
+      "20\n"
+     ]
+    }
+   ],
+   "source": [
+    "# we have to follow structure\n",
+    "\n",
+    "def hello(): #function with no arguments\n",
+    "    print('hi')\n",
+    "\n",
+    "\n",
+    "def add(a,b):# function with arguments\n",
+    "    c=a+b\n",
+    "    print(c)\n",
+    "\n",
+    "\n",
+    "def person(name,age):#function with arguments\n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "    \n",
+    "hello()\n",
+    "add(3,4)\n",
+    "person('hari',20)# positional args"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "fa156945",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(9, -1)\n",
+      "<class 'tuple'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "def add_sub(x,y): # what if i want to return 2 values add_sub & i want to return 2 values & function can accept multiple value \n",
+    "    c= x+y\n",
+    "    d= x-y\n",
+    "    return c, d\n",
+    "\n",
+    "result = add_sub(4,5)\n",
+    "print(result)\n",
+    "print(type(result))# it is tuple"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dd1af7b7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(9, 1)\n",
+      "<class 'tuple'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "def add_sub(x,y):\n",
+    "    c= x+y\n",
+    "    d= x-y\n",
+    "    return c, d\n",
+    "\n",
+    "result1= add_sub(5,4)# because you are assigning to single variable\n",
+    "print(result1)\n",
+    "print(type(result1))\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "3da66eb0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "9 1\n",
+      "<class 'int'>\n",
+      "<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "def add_sub(x,y):\n",
+    "    c= x+y\n",
+    "    d= x-y\n",
+    "    return c, d\n",
+    "\n",
+    "result1,result2= add_sub(5,4)\n",
+    "print(result1,result2)\n",
+    "print(type(result1))\n",
+    "print(type(result2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "21e6f283",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# we are learning function because we build all projects using it\n",
+    "\n",
+    "# Going further we should avoide using print() instead we should use return"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "abb4bf85",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "5"
+      ]
+     },
+     "execution_count": 12,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "def add(a,b):\n",
+    "    c = a+b\n",
+    "    return c\n",
+    "add(2,3)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0ffd0eb0",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "'''function are always reuseable \n",
+    "- in one code you can write multiple function as well\n",
+    "FUNCTION ARGUMENTS\n",
+    "- FUNCTION ARGUMENT\n",
+    "- How to pass parameter to a function & what happend to the variable\n",
+    "when you pass to a function & if you modify the value then what happen\n",
+    "- every code check with debug'''"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2fa59a97",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# we saw function without arg\n",
+    "# function with arg\n",
+    "''' we have two types of Arguments\n",
+    "Formal argument(metion at the time of defination)\n",
+    "Actual argument(while we are calling)\n",
+    "..> actual arg divided in to four/5 types\n",
+    ">>positional args\n",
+    ">>default args\n",
+    ">>keyword args\n",
+    ">>variable length args\n",
+    ">>kwargs--keyword arg + variable length arg\n",
+    "'''"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f75a4a56",
+   "metadata": {},
+   "source": [
+    "POSITIONAL argument"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "ea5f52d9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "nit\n",
+      "20\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age):\n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "person('nit',20)\n",
+    "# this is called postion argument becuase name we assigned to position name to nit & age to 28\n",
+    "# how it know that name - nit & age - 28 we need to take care of the position, we need to maintain the sequence but what if we dont know the sequence\n",
+    "# lets check we have 10 variable and we need to assign them with position but what if we forget the sequence"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "9bd31231",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20\n",
+      "nit\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age):\n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "person(20,'nit') \n",
+    "# in this case we cant assign name - 20 & age to 'nit' then we can assign them as keyword \n",
+    "# as we keep incorrect position this code trhoughs an error . so how to fix them \n",
+    "# i dont want assign name - 20 & age to nit & in this case we will assing keyword"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6d6df448",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "20\n"
+     ]
+    },
+    {
+     "ename": "TypeError",
+     "evalue": "unsupported operand type(s) for -: 'str' and 'int'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[19], line 4\u001b[0m\n\u001b[0;32m      2\u001b[0m     \u001b[38;5;28mprint\u001b[39m(name)\n\u001b[0;32m      3\u001b[0m     \u001b[38;5;28mprint\u001b[39m(age\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m5\u001b[39m)\n\u001b[1;32m----> 4\u001b[0m person(\u001b[38;5;241m20\u001b[39m,\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mnit\u001b[39m\u001b[38;5;124m'\u001b[39m)\n",
+      "Cell \u001b[1;32mIn[19], line 3\u001b[0m, in \u001b[0;36mperson\u001b[1;34m(name, age)\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;21mperson\u001b[39m(name,age):\n\u001b[0;32m      2\u001b[0m     \u001b[38;5;28mprint\u001b[39m(name)\n\u001b[1;32m----> 3\u001b[0m     \u001b[38;5;28mprint\u001b[39m(age\u001b[38;5;241m-\u001b[39m\u001b[38;5;241m5\u001b[39m)\n",
+      "\u001b[1;31mTypeError\u001b[0m: unsupported operand type(s) for -: 'str' and 'int'"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age):\n",
+    "    print(name)\n",
+    "    print(age-5)\n",
+    "person(20,'nit') \n",
+    "# in this case we cant assign name - 20 & age to 'nit' then we can assign them as keyword \n",
+    "# this code give you error "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4e86f410",
+   "metadata": {},
+   "source": [
+    "KEYWORD argument"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "76aadf22",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "nit\n",
+      "20\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age):\n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "person(age = 20, name = 'nit') #this is called keyword arguments"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a1bd08cb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "nit\n",
+      "15\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age):\n",
+    "    print(name)\n",
+    "    print(age-5)# now this will work\n",
+    "person(age = 20, name = 'nit')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a8b0c703",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "person() missing 1 required positional argument: 'age'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[25], line 5\u001b[0m\n\u001b[0;32m      2\u001b[0m     \u001b[38;5;28mprint\u001b[39m(name)\n\u001b[0;32m      3\u001b[0m     \u001b[38;5;66;03m#print(age)\u001b[39;00m\n\u001b[1;32m----> 5\u001b[0m person(name \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mnit\u001b[39m\u001b[38;5;124m'\u001b[39m)\n",
+      "\u001b[1;31mTypeError\u001b[0m: person() missing 1 required positional argument: 'age'"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age):\n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "    \n",
+    "person(name = 'nit')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c232c4eb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# in the above case one arg is not defined \n",
+    "#in that case we can use default arg"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3d381b13",
+   "metadata": {},
+   "source": [
+    "DEFAULT argument"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "38176760",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "nit\n",
+      "18\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age=18): #age = 18 is default arg..>for eg: right to vote is at 18 y age \n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "    \n",
+    "person(name = 'nit')# now it works"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a6e8d643",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "nit\n",
+      "40\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,age=18): #age = 18 is default arg..>for eg: right to vote is at 18 y age \n",
+    "    print(name)\n",
+    "    print(age)\n",
+    "    \n",
+    "person(name = 'nit', age = 40)# as you defined it takes keyword arg/if not it takes default"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b629f838",
+   "metadata": {},
+   "source": [
+    "VARIABLE LENGTH argument"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "c77c15d1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "11\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, b):\n",
+    "    c = a+b\n",
+    "    print(c)\n",
+    "\n",
+    "sum(5,6) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "90ef556b",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "'''- Everytime we cant add only 2 value we can also pass more the 3 values\n",
+    "- you can define the function when the number of argument are not fixed'''"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0a47a03a",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "sum() takes 2 positional arguments but 4 were given",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[29], line 5\u001b[0m\n\u001b[0;32m      2\u001b[0m     c \u001b[38;5;241m=\u001b[39m a\u001b[38;5;241m+\u001b[39mb\n\u001b[0;32m      3\u001b[0m     \u001b[38;5;28mprint\u001b[39m(c)\n\u001b[1;32m----> 5\u001b[0m \u001b[38;5;28msum\u001b[39m(\u001b[38;5;241m5\u001b[39m,\u001b[38;5;241m6\u001b[39m,\u001b[38;5;241m7\u001b[39m,\u001b[38;5;241m8\u001b[39m)\n",
+      "\u001b[1;31mTypeError\u001b[0m: sum() takes 2 positional arguments but 4 were given"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, b):\n",
+    "    c = a+b\n",
+    "    print(c)\n",
+    "\n",
+    "sum(5,6,7,8) # positional should equal to formal arg"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "01fc0eb9",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "unsupported operand type(s) for +: 'int' and 'tuple'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[30], line 5\u001b[0m\n\u001b[0;32m      2\u001b[0m     c \u001b[38;5;241m=\u001b[39m a\u001b[38;5;241m+\u001b[39mb\n\u001b[0;32m      3\u001b[0m     \u001b[38;5;28mprint\u001b[39m(c)\n\u001b[1;32m----> 5\u001b[0m \u001b[38;5;28msum\u001b[39m(\u001b[38;5;241m5\u001b[39m,\u001b[38;5;241m6\u001b[39m,\u001b[38;5;241m7\u001b[39m,\u001b[38;5;241m8\u001b[39m)\n",
+      "Cell \u001b[1;32mIn[30], line 2\u001b[0m, in \u001b[0;36msum\u001b[1;34m(a, *b)\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;21msum\u001b[39m(a, \u001b[38;5;241m*\u001b[39mb): \u001b[38;5;66;03m# 1st argument is fixed but for 2nd argument\u001b[39;00m\n\u001b[1;32m----> 2\u001b[0m     c \u001b[38;5;241m=\u001b[39m a\u001b[38;5;241m+\u001b[39mb\n\u001b[0;32m      3\u001b[0m     \u001b[38;5;28mprint\u001b[39m(c)\n",
+      "\u001b[1;31mTypeError\u001b[0m: unsupported operand type(s) for +: 'int' and 'tuple'"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): # 1st argument is fixed but for 2nd argument\n",
+    "    c = a+b\n",
+    "    print(c)\n",
+    "\n",
+    "sum(5,6,7,8) \n",
+    "# we got error as int & tuple error becuase a is integer & b is tuple"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "bdce1a97",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n",
+      "<class 'tuple'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b):\n",
+    "    #c = a+b\n",
+    "    print(type(a))\n",
+    "    print(type(b))\n",
+    "\n",
+    "sum(5,6,7,8) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "4cf82d2a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n",
+      "6\n",
+      "10\n",
+      "15\n",
+      "21\n",
+      "28\n",
+      "36\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): # 1st argument is fixed & we fetch each value from the tuple & we can add them. \n",
+    "    c = a     \n",
+    "    for i in b: # as here we work with sequence type  we use for loop\n",
+    "        c = c + i \n",
+    "        print(c)\n",
+    "sum(1,2,3,4,5,6,7,8) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "3c1f3b8a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "35\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): \n",
+    "    c = a \n",
+    "    for i in b:\n",
+    "        c = c + i \n",
+    "    print(c)\n",
+    "sum(5,6,7,8,9) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "4f6cbfcb",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "45\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): \n",
+    "    c = a    \n",
+    "    for i in b:\n",
+    "        c = c + i \n",
+    "    print(c)\n",
+    "sum(5,6,7,8,4,-1,1,2,3,4,6) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "525972fc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "21\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): \n",
+    "    c = 0\n",
+    "    for i in b:\n",
+    "        c = c + i \n",
+    "    print(c)\n",
+    "sum(5,6,7,8) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "6d5307c9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "22\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): \n",
+    "    c = 1\n",
+    "    for i in b:\n",
+    "        c = c + i \n",
+    "    print(c)\n",
+    "sum(5,6,7,8) "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "b2eefad1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "26\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): \n",
+    "    c = a\n",
+    "    for i in b:\n",
+    "        c = c + i \n",
+    "    print(c)\n",
+    "sum(5,6,7,8) \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "bf972e67",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "26\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sum(a, *b): \n",
+    "    c = 5\n",
+    "    for i in b:\n",
+    "        c = c + i \n",
+    "    print(c)\n",
+    "sum(5,6,7,8) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e229f031",
+   "metadata": {},
+   "source": [
+    "KWARGS (keyword argument and variable length argument)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "id": "8f61ffa6",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def person():\n",
+    "    person('RKY', 36, 'GKY', 987767)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 51,
+   "id": "63180954",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "RKY\n",
+      "(36, 'GKY', 987767)\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,*data):\n",
+    "    print(name)\n",
+    "    print(data)\n",
+    "\n",
+    "person('RKY', 36, 'GKY', 987767)\n",
+    "#hear what is name - is it RKY or GKY thats why we assigned keywords varible arguments"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 46,
+   "id": "507ffd9b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "RKY\n",
+      "(36, 'GKY', 987767)\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,*data):\n",
+    "    print(name)\n",
+    "    print(data)\n",
+    "    \n",
+    "person('RKY', 36, 'GKY', 987767)\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 47,
+   "id": "7c5a3340",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "person() got an unexpected keyword argument 'age'",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[47], line 5\u001b[0m\n\u001b[0;32m      2\u001b[0m     \u001b[38;5;28mprint\u001b[39m(name)\n\u001b[0;32m      3\u001b[0m     \u001b[38;5;28mprint\u001b[39m(data)\n\u001b[1;32m----> 5\u001b[0m person(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mRKY\u001b[39m\u001b[38;5;124m'\u001b[39m, age \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m36\u001b[39m, home_place \u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124msouthcity\u001b[39m\u001b[38;5;124m'\u001b[39m, mob \u001b[38;5;241m=\u001b[39m\u001b[38;5;241m987767\u001b[39m)\n",
+      "\u001b[1;31mTypeError\u001b[0m: person() got an unexpected keyword argument 'age'"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,*data):\n",
+    "    print(name)\n",
+    "    print(data)\n",
+    "\n",
+    "person('RKY', age = 36, home_place ='southcity', mob =987767)\n",
+    "# we got error as keyword argument thats why we add another *"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 48,
+   "id": "ae7ded41",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "RKY\n",
+      "{'age': 36, 'home_place': 'southcity', 'mob': 987767}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,**data):\n",
+    "    print(name)\n",
+    "    print(data)\n",
+    "\n",
+    "person('RKY', age = 36, home_place ='southcity', mob =987767)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b3fb458b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "RKY\n",
+      "{'age': 36, 'home_place': 'southcity', 'mob': 987767, 'edu': 'degree', 'actor': 'ABC'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,**data):# \n",
+    "    print(name)\n",
+    "    print(data)\n",
+    "\n",
+    "person('RKY', age = 36, home_place ='southcity', mob =987767, edu='degree', actor = 'ABC')\n",
+    "#even though you can keep add the keyword this concept we called as KWARGS"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 52,
+   "id": "a3a69acc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "john\n",
+      "age 36\n",
+      "home_place southcity\n",
+      "mob 987767\n",
+      "place USA\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,**data):\n",
+    "    print(name)\n",
+    "    \n",
+    "    for i, j in data.items():\n",
+    "        print(i, j)\n",
+    "        \n",
+    "person('john', age = 36, home_place ='southcity', mob =987767, place = 'USA')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 55,
+   "id": "9d092001",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "john\n"
+     ]
+    },
+    {
+     "ename": "ValueError",
+     "evalue": "too many values to unpack (expected 2)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[1;31mValueError\u001b[0m                                Traceback (most recent call last)",
+      "Cell \u001b[1;32mIn[55], line 7\u001b[0m\n\u001b[0;32m      4\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m i, j \u001b[38;5;129;01min\u001b[39;00m data\u001b[38;5;241m.\u001b[39mkeys():\n\u001b[0;32m      5\u001b[0m         \u001b[38;5;28mprint\u001b[39m(i, j)\n\u001b[1;32m----> 7\u001b[0m person(\u001b[38;5;124m'\u001b[39m\u001b[38;5;124mjohn\u001b[39m\u001b[38;5;124m'\u001b[39m, age \u001b[38;5;241m=\u001b[39m \u001b[38;5;241m36\u001b[39m, home_place \u001b[38;5;241m=\u001b[39m\u001b[38;5;124m'\u001b[39m\u001b[38;5;124msouthcity\u001b[39m\u001b[38;5;124m'\u001b[39m, mob \u001b[38;5;241m=\u001b[39m\u001b[38;5;241m987767\u001b[39m, place \u001b[38;5;241m=\u001b[39m \u001b[38;5;124m'\u001b[39m\u001b[38;5;124mUSA\u001b[39m\u001b[38;5;124m'\u001b[39m)\n",
+      "Cell \u001b[1;32mIn[55], line 4\u001b[0m, in \u001b[0;36mperson\u001b[1;34m(name, **data)\u001b[0m\n\u001b[0;32m      1\u001b[0m \u001b[38;5;28;01mdef\u001b[39;00m\u001b[38;5;250m \u001b[39m\u001b[38;5;21mperson\u001b[39m(name,\u001b[38;5;241m*\u001b[39m\u001b[38;5;241m*\u001b[39mdata):\n\u001b[0;32m      2\u001b[0m     \u001b[38;5;28mprint\u001b[39m(name)\n\u001b[1;32m----> 4\u001b[0m     \u001b[38;5;28;01mfor\u001b[39;00m i, j \u001b[38;5;129;01min\u001b[39;00m data\u001b[38;5;241m.\u001b[39mkeys():\n\u001b[0;32m      5\u001b[0m         \u001b[38;5;28mprint\u001b[39m(i, j)\n",
+      "\u001b[1;31mValueError\u001b[0m: too many values to unpack (expected 2)"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,**data):\n",
+    "    print(name)\n",
+    "    \n",
+    "    for i, j in data.keys():\n",
+    "        print(i, j)\n",
+    "        \n",
+    "person('john', age = 36, home_place ='southcity', mob =987767, place = 'USA')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 59,
+   "id": "d287c783",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "john\n",
+      "age\n",
+      "home_place\n",
+      "mob\n",
+      "place\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,**data):\n",
+    "    print(name)\n",
+    "    \n",
+    "    for i in data.keys():\n",
+    "        print(i)\n",
+    "        \n",
+    "person('john', age = 36, home_place ='southcity', mob =987767, place = 'USA')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 60,
+   "id": "6f2d8369",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "john\n",
+      "36\n",
+      "southcity\n",
+      "987767\n",
+      "USA\n"
+     ]
+    }
+   ],
+   "source": [
+    "def person(name,**data):\n",
+    "    print(name)\n",
+    "    \n",
+    "    for j in data.values():\n",
+    "        print(j)\n",
+    "        \n",
+    "person('john', age = 36, home_place ='southcity', mob =987767, place = 'USA')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7c040ab5",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "base",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
